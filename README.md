@@ -10,6 +10,7 @@ The main OS used is MacOS. Else, please find an appropriate terminal emulator an
 2. [Node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (for certain plugins and LSPs)
 3. supported [nerfont](https://www.nerdfonts.com/font-downloads) (current: CodeNewRoman)
 4. [ripgrep](https://github.com/BurntSushi/ripgrep)
+5. [lazygit](https://github.com/jesseduffield/lazygit)
 
 ## How to
 
