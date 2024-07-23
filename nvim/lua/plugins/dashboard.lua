@@ -25,7 +25,7 @@ local center = {
     key = "s",
     icon = " ",
     action = 'lua require("persistence").load()',
-    group = "Label",
+    group = "Function",
   },
   {
     desc = "Lazy ",
