@@ -7,3 +7,10 @@ vim.keymap.set(
   require("telescope.builtin").resume,
   { noremap = true, silent = true, desc = "Resume" }
 )
+
+vim.keymap.set(
+  "t",
+  "<esc><esc>",
+  "<C-\\><C-n>",
+  { noremap = true, silent = true, desc = "Exit terminal mode" }
+)

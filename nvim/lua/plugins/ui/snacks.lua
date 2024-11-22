@@ -3,6 +3,6 @@ return {
   opts = {
     dashboard = {
       enabled = false,
-    }
+    },
   }
 }
