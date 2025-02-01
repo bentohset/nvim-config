@@ -9,6 +9,7 @@ brew "fzf"
 brew "node"
 
 # image rendering in nvim kitty
+brew "luarocks"
 brew "imagemagick"
 
 # nerdfont
