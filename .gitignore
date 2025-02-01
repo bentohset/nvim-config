@@ -2,3 +2,6 @@
 *.tests
 *.log
 gcloud
+
+# flipper zero
+/flipperdevices.com

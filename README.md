@@ -1,26 +1,52 @@
 # NeoVim config
 
-A repo to manage my [lazyvim](http://www.lazyvim.org/)-based NeoVim and Terminal([iTerm2](https://iterm2.com/)) configs.
+A repo to manage my [lazyvim](http://www.lazyvim.org/)-based NeoVim and terminal configs
 
-The main OS used is MacOS. Else, please find an appropriate terminal emulator and installation method.
+The main OS used is MacOS. Else, please find an appropriate terminal emulator and installation method. Linux should be supported but untested.
 
 ## Prerequisites
 
-1. [Neovim](https://neovim.io/)
-2. [Node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (for certain plugins and LSPs)
-3. supported [nerfont](https://www.nerdfonts.com/font-downloads) (current: CodeNewRoman)
-4. [ripgrep](https://github.com/BurntSushi/ripgrep)
-5. [lazygit](https://github.com/jesseduffield/lazygit)
+- homebrew
+- kitty
+- neovim
+- node and npm (for certain plugins)
+- nerdfont (JetBrainsMono)
+- ripgrep, fzf
+- lazygit
 
 ## How to
 
-### Import configuration
+### Installation
 
 ```bash
+# initialize git .config
 cd $HOME
 mkdir .config
 cd .config
 git clone https://github.com/bentohset/nvim-config.git .
+
+# install homebrew (for fresh install)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# install kitty from https://sw.kovidgoyal.net/kitty/binary/
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+
+# install a nerdfont from https://www.nerdfonts.com/font-downloads
+curl -L -o ~/Library/Fonts/JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip \
+&& cd ~/Library/Fonts/ \
+&& unzip JetBrainsMono.zip \
+&& rm JetBrainsMono.zip
+
+# install neovim
+brew install neovim
+
+# install ripgrep and lazygit
+brew install ripgrep lazygit fzf
+
+# install nvm, node and npm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+source ~/.zshrc
+nvm install 23
 ```
 
 ### Push update to remote
