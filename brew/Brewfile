@@ -1,0 +1,16 @@
+# terminal related
+brew "kitty"
+brew "neovim"
+brew "lazygit"
+
+# packages
+brew "ripgrep"
+brew "fzf"
+brew "node"
+
+# image rendering in nvim kitty
+brew "imagemagick"
+
+# nerdfont
+cask "font-jetbrains-mono-nerd-font"
+

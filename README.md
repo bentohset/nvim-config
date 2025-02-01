@@ -28,25 +28,8 @@ git clone https://github.com/bentohset/nvim-config.git .
 # install homebrew (for fresh install)
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# install kitty from https://sw.kovidgoyal.net/kitty/binary/
-curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-
-# install a nerdfont from https://www.nerdfonts.com/font-downloads
-curl -L -o ~/Library/Fonts/JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip \
-&& cd ~/Library/Fonts/ \
-&& unzip JetBrainsMono.zip \
-&& rm JetBrainsMono.zip
-
-# install neovim
-brew install neovim
-
-# install ripgrep and lazygit
-brew install ripgrep lazygit fzf
-
-# install nvm, node and npm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-source ~/.zshrc
-nvm install 23
+# install dependencies
+brew bundle --file==~/.config/brew/Brewfile
 ```
 
 ### Push update to remote
