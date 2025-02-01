@@ -1,5 +1,5 @@
 # terminal related
-brew "kitty"
+cask "kitty"
 brew "neovim"
 brew "lazygit"
 

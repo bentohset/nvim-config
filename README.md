@@ -29,7 +29,7 @@ git clone https://github.com/bentohset/nvim-config.git .
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # install dependencies
-brew bundle --file==~/.config/brew/Brewfile
+brew bundle --file=~/.config/brew/Brewfile
 ```
 
 ### Push update to remote
