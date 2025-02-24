@@ -13,6 +13,7 @@ The main OS used is MacOS. Else, please find an appropriate terminal emulator an
 - nerdfont (JetBrainsMono)
 - ripgrep, fzf
 - lazygit
+- clangd
 
 ## How to
 
