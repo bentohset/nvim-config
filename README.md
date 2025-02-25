@@ -9,7 +9,6 @@ The main OS used is MacOS. Else, please find an appropriate terminal emulator an
 - homebrew
 - kitty
 - neovim
-- node and npm (for certain plugins)
 - nerdfont (JetBrainsMono)
 - ripgrep, fzf
 - lazygit
