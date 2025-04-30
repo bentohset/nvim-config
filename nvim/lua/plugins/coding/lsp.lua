@@ -14,7 +14,7 @@ return {
 
     opts = {
       servers = {
-        tsserver = {},
+        neocmake = {},
         basedpyright = {
           autoformat = false,
         },
@@ -71,13 +71,19 @@ return {
               "config.h.in",
               "meson.build",
               "meson_options.txt",
-              "build.ninja"
+              "build.ninja",
+              "build.sh",
+              "compile_commands.json",
+              ".clang-format"
             )(fname) or require("lspconfig.util").root_pattern("compile_commands.json", "compile_flags.txt")(
               fname
             ) or require("lspconfig.util").find_git_ancestor(fname)
           end,
           capabilities = {
             offsetEncoding = { "utf-16" },
+          },
+          filetypes = {
+            "c", "cpp", "proto"
           },
           cmd = {
             "clangd",
@@ -87,6 +93,7 @@ return {
             "--completion-style=detailed",
             "--function-arg-placeholders",
             "--fallback-style=llvm",
+            "--compile-commands-dir=./cmake-build-debug",
           },
           init_options = {
             usePlaceholders = true,
@@ -99,11 +106,6 @@ return {
       -- return true if you don't want this server to be setup with lspconfig
       ---@type table<string, fun(server:string, opts:_.lspconfig.options):boolean?>
       setup = {
-        -- example to setup with typescript.nvim
-        tsserver = function(_, opts)
-          require("typescript").setup({ server = opts })
-          return true
-        end,
         -- Specify * to use this function as a fallback for any server
         -- ["*"] = function(server, opts) end,
         gopls = function(_, opts)
