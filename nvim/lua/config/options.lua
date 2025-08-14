@@ -3,3 +3,18 @@
 -- Add any additional options here
 vim.opt.winbar = "%=%m %f"
 vim.g.autoformat = false
+
+-- For clipboard sync between ssh remote and local
+vim.opt.clipboard = "unnamedplus"
+
+vim.g.clipboard = {
+  name = "OSC 52",
+  copy = {
+    ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+  },
+  paste = {
+    ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+  },
+}
