@@ -1,17 +1,10 @@
 # terminal related
-cask "kitty"
 brew "neovim"
 brew "lazygit"
 
 # packages
 brew "ripgrep"
 brew "fzf"
-brew "node"
-
-# image rendering in nvim kitty
-brew "pkg-config" # some installations will not link dylib file automatically to nvim
-brew "luarocks"
-brew "imagemagick"
 
 # nerdfont
 cask "font-jetbrains-mono-nerd-font"

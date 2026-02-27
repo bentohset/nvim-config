@@ -1,7 +1,7 @@
 # Example markdownlint configuration with all properties set to their default value
 
 # Default state for all rules
-default: true
+default: false
 
 # Path to configuration file to extend
 extends: null
