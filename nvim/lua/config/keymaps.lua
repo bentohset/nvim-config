@@ -9,6 +9,13 @@ vim.keymap.set(
 )
 
 vim.keymap.set(
+  "n",
+  "<leader>sg",
+  require("fzf-lua").live_grep_resume,
+  {noremap = true, silent = true, desc = "Grep last (root dir)"}
+)
+
+vim.keymap.set(
   "t",
   "<esc><esc>",
   "<C-\\><C-n>",
